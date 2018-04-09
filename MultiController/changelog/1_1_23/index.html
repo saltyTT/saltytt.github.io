@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MultiController 1.0 (251)</title>
+    <title>MultiController 1.1 (23)</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -23,13 +23,26 @@
     </nav>
     <div class="w-100" style="height:15px;"></div>
     <div class="container">
-        <h1>1.0 (251)</h1>
-        <h5>April 5 2018</h5>
+        <h1>1.1 (23)</h1>
+        <h5>April 8 2018</h5>
         <ul>
-            <li>Bugfixes</li>
+            <li>Functionality</li>
             <ul>
-                <li>Fixed issue where jump would get inverted if you released the jump key after selecting another window</li>
-                <li>General is now the default tab when opening Preferences</li>
+                <li>Added a restore default button for keybinds</li>
+            </ul>  
+            <li>Design</li>
+            <ul>
+                <li>Removed title bar for a cleaner look</li>
+            </ul>  
+            <li>Performance</li>
+            <ul>
+                <li>Update handling made safer and more efficient</li>
+                <li>Reworked preferences file, no longer stored in Application Support</li>
+                <li><strong>NOTE:</strong>
+                <ul>
+                    <li>Because of this, you will need to redo any custom keybinds</li>
+                    <li>You can also delete the folder at ~/Library/Application Support/MultiController as it is no longer being used</li>
+                </ul>
             </ul>  
         </ul>
     </div>
