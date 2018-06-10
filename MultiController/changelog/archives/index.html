@@ -22,54 +22,46 @@
         </ul>
     </nav>
     <div class="w-100" style="height:15px;"></div>
-    <div class="container">
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-dark"><strong> 1</strong></li>
-            <li class="list-group-item list-group-item-primary">
-                <strong>1.2 (45) ~ </strong>
-                <a href="../1_2_45">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v1.2_45/MultiController.app.zip">Download</a>
-            </li>
-            <li class="list-group-item">
-                <strong>1.1 (36) ~ </strong>
-                <a href="../1_1_36">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v1.1_36/MultiController.app.zip">Download</a>
-            </li>
-            <li class="list-group-item">
-                <strong>1.1 (23) ~ </strong>
-                <a href="../1_1_23">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v1.1_23/MultiController.app.zip">Download</a>
-            </li>
-            <li class="list-group-item">
-                <strong>1.0 (251) ~ </strong>
-                <a href="../1_0_251">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v1.0_251/MultiController.app.zip">Download</a>
-            </li>
-            <li class="list-group-item">
-                <strong>1.0 (246) ~ </strong>
-                <a href="../1_0_246">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v1.0_246/MultiController.app.zip">Download</a>
-            </li>
-        </ul>
-        <div class="w-100" style="height:15px;"></div>
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-dark"><strong> 0</strong></li>
-            <li class="list-group-item">
-                <strong>0.2.1 ~ </strong>
-                <a href="../0_2_1">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v0.2.1/MultiController.app.zip">Download</a>
-            </li>
-            <li class="list-group-item">
-                <strong>0.1.0 ~ </strong>
-                <a href="../0_1_0">Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v0.1.0/MultiController.app.zip">Download</a>
-            </li>
-            <li class="list-group-item">
-                <strong>0.0.1 ~ </strong>
-                <a>Changelog</a>
-                - <a href="https://github.com/saltyTT/MultiController/releases/download/v0.0.1/MultiController.app.zip">Download</a>
-            </li>
-        </ul>
+    <div id="maincont" class="container">
+        <script>
+            var releases = {
+                1: [],
+                0: []
+            };
+    
+            fetch("https://api.github.com/repos/saltytt/MultiController/tags").then(function(res) {
+                res.json().then(function(r) {
+                    for(var i = 0; i < r.length; i++)
+                        releases[r[i]["name"][1]] = releases[r[i]["name"][1]].concat(r[i]["name"]);
+    
+                    var majors = Object.keys(releases).sort().reverse();
+                    var maincont = document.getElementById("maincont");
+                    maincont.innerHTML = '<div class="w-100" style="height:15px;"></div>';
+
+                    for(var i = 0; i < majors.length; i++) {
+                        var block = document.createElement("ul");
+                        block.innerHTML = '<li class="list-group-item list-group-item-dark"><strong> ' + majors[i] + '</strong></li>';
+                        block.setAttribute("class", "list-group");
+                        maincont.appendChild(block);
+                        for(var j = 0; j < releases[majors[i]].length ; j++) {
+                            var versionname = releases[majors[i]][j];
+                            var versionclean = versionname.substring(1);
+                            if (versionclean.includes("_"))
+                                versionclean = versionclean.replace("_", " (").concat(")");
+                            var versionurl = versionname.substring(1).replace(/\./g,"_");
+                            console.log(versionname);
+                            if (i == 0 && j == 0)
+                                block.innerHTML += '<li class="list-group-item list-group-item-primary"> <strong>' + versionclean + ' ~ </strong><a href="../' + versionurl + '">Changelog</a> - <a href="https://github.com/saltyTT/MultiController/releases/download/' + versionname + '/MultiController.app.zip">Download</a></li>';
+                            else
+                                block.innerHTML += '<li class="list-group-item"> <strong>' + versionclean + ' ~ </strong><a href="../' + versionurl + '">Changelog</a> - <a href="https://github.com/saltyTT/MultiController/releases/download/' + versionname + '/MultiController.app.zip">Download</a></li>';
+                        }
+                        maincont.innerHTML += '<div class="w-100" style="height:15px;"></div>';
+                    }   
+                });
+            });
+            
+        </script>
     </div>
+
 </body>
 </html>
