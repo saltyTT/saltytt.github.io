@@ -41,18 +41,33 @@
             <div class="jumbotron">
                 <h1 class="display-4">Download</h1>
                 <p class="lead">
-                    <a class="btn btn-dark btn-lg" href="https://github.com/saltyTT/MultiController/releases/download/v1.2_45/MultiController.app.zip" role="button">v1.2 (45)</a>
+                    <p class="lead">Requires macOS 10.12.2 or newer</p>
+
+                    <a id="dl" class="btn btn-dark btn-lg" role="button"></a>
                     <a class="btn btn-outline-dark btn-lg" href="./changelog" role="button">Changelog</a>
                 </p>
+                <em class="lead" id="dls"></em>
 
-                <p class="lead">Requires macOS 10.12.2 or newer</p>
+                <script>
+                    fetch("https://api.github.com/repos/saltytt/MultiController/releases/latest").then(function(res) {
+                        res.json().then(function(r) {
+                            var dl = document.getElementById("dl");
+                            var versionname = r.tag_name;
+                            var versionclean = versionname.substring(1);
+                            if (versionclean.includes("_"))
+                                versionclean = versionclean.replace("_", " (").concat(")");
+                            dl.setAttribute("href", "https://github.com/saltyTT/MultiController/releases/download/" + versionname + "/MultiController.app.zip");
+                            dl.innerHTML = versionclean;
+                            dls.innerHTML = r.assets[0].download_count + " downloads";
+                        });
+                    });
+                </script>
+
                 <hr class="my-4">
                 If you try to open the app but get "this app is damaged," follow <a href="https://www.youtube.com/watch?v=6FF1c_7lnGo">this video</a><br>
                 If you try to open the app but get "this is from an unidentified developer," right click the app, click Open, then click Open again
             </div>
-            
         </div>
-
         
         <div class="container">
             <div class="row">
