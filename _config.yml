@@ -1,0 +1,32 @@
+author: SaltyTT
+title: Salty ToonTown
+title_m: MultiController
+description: >- 
+  Captain Salty's Github pages
+description_m: >-
+  Toontown MultiController for Mac
+keywords_m: >-
+  MultiController,Mac,Toontown,Salty,Zalty,Zed
+last_update:
+  May 29, 2019
+url: "http://saltytt.github.io" 
+github_username:  saltytt
+
+# Build settings
+markdown: kramdown
+plugins:
+   - jekyll-redirect-from
+sass:
+  sass_dir: css
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

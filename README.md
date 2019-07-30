@@ -1,2 +1,0 @@
-# saltytt.github.io
-website

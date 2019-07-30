@@ -1,0 +1,29 @@
+---
+layout: multi_secondary
+permalink: MultiController/releases/
+title: Releases
+---
+
+<div class="releases">
+    {% for release in site.data.releases %}
+    {%- capture version -%}
+    {% if release.tag_name contains '_' %}
+    {{ release.tag_name | remove_first: "v" | replace: "_", " (" | append: ")" }}
+    {% else %}
+    {{ release.tag_name | remove_first: "v" }}
+    {% endif %}
+    {%- endcapture -%}
+    {%- capture version_simple -%}
+    {{ release.tag_name | replace: ".", "_" }}
+    {%- endcapture -%}
+    <div class="release">
+        <h1 id="{{ version_simple }}"><a href="#{{ version_simple }}">{{ release.name }} {{ version }}</a><div class="more-info">{{ release.published_at | date: '%B %-d, %Y' }}<a href="{{ release.html_url }}"><img style="padding-left:10px" height="20px" src="/assets/img/GitHubMark.png"/></a></div></h1>
+        <p class="downloadcount">{{ release.assets[0].download_count }}+ downloads</p>
+        <div class="releasebody">
+            {{ release.body }}
+        </div> 
+    </div>
+    <hr>
+    {% endfor %}
+    <p class="last-update">Last updated {{ site.last_update }}</p>
+</div>

@@ -1,0 +1,239 @@
+---
+---
+@import 'bootstrap/bootstrap';
+
+// universal 
+
+body {
+    text-align: center;
+    color: #C4EBFE;
+    background-color: #23272A;
+}
+
+h1, h2, h3 { 
+    font-weight: normal;
+}
+
+.navbar {
+    background-color: #668CD2 !important;
+}
+
+.navbar .navbar-header {
+    padding-right: 30px;
+}
+
+.navbar .nav-item .nav-link {
+    color: #C4EBFE;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #FEC6C7;
+}
+
+.navbar .nav-item .active {
+    color: #FEC6C7;
+}
+
+.navbar-toggler {
+    width: 47px;
+    height: 34px;
+    background-color: #668CD2;
+    border-color: #C4EBFE;
+}
+
+.navbar-toggler .line {
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: #C4EBFE;
+    margin-bottom: 5px;
+}
+
+.jumbotron {
+    background-color: #2C2F33;
+    border-bottom-color: rgb(59, 61, 63);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+.jumbotron .hero-descriptor {
+    font-size: 45px;
+    color: #fff;
+}
+
+footer {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+footer hr {
+    border-color: rgb(59, 61, 63);
+    border-style: solid;
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    footer hr {
+        width: 100%;
+    }
+}
+
+footer a {
+    color: #C4EBFE;
+}
+
+footer a:hover {
+    color: #FEC6C7;
+    text-decoration: none;
+}
+
+.footer-img {
+    margin-top: -5px;
+}
+
+// .
+
+#download-latest:hover {
+    color: #FEC6C7;
+}
+
+.v-desc {
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 5px;
+    color: white;
+}
+
+.features {
+    width: 80%;
+}
+
+.feature-img {
+    width: 60%;
+}
+
+.img-shadow {
+    box-shadow: 0px 0px 15px 5px rgb(22, 22, 22);
+}
+
+@media (max-width: 768px) {
+    .img-shadow {
+        margin-bottom: 15px;
+    }
+}
+
+.features h2 {
+    font-size: 30px;
+}
+
+.features p {
+    font-size: 20px;
+    color: #D7D7D7;
+}
+
+.feature-note {
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+// ./Releases
+
+.releases {
+    text-align: left;
+    padding: 3vw;
+    margin-top: -25px;
+}
+
+.releases .release {
+    padding: 30px;
+}
+
+.releases h1 {
+    font-size: 40px;
+}
+
+.releases .more-info {
+    color: rgb(211, 211, 211);
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+.releases .more-info img {
+    margin-top: -5px;
+}
+
+.releases a:hover {
+    color: #fec6c7;
+    text-decoration: none;
+}
+
+.releases .downloadcount {
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.releases h2 {
+    color: #C4EBFE;
+    padding-top: 10px;
+    font-size: 28px;
+}
+
+.releases li {
+    list-style-position: inside;
+    padding-left: 15px;
+    font-size: 18px
+}
+
+.releases .nested-list {
+    padding-left: 40px;
+    list-style-type: circle;
+}
+
+.releases hr {
+    border-color: rgb(59, 61, 63);
+    border-style: solid;
+}
+
+.last-update {
+    font-size: 12px;
+    font-style: italic;
+    padding-left: 15px;
+}
+
+// ./Help
+
+#help a:hover {
+    color: #fec6c7;
+    text-decoration: none;
+}
+
+.help-title {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.help-desc {
+    color: #D7D7D7;
+}
+
+.qtn {
+    padding-bottom: 4px;
+    font-size: 16px;
+    color: #D7D7D7;
+}
+
+.ans {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.settings-directory {
+    color: #ccc;
+    background-color: #2C2F33;
+    font-family: monospace;
+}
+
+#faq {
+    padding-top: 50px;
+}
