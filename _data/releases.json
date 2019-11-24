@@ -35,9 +35,9 @@
     "published_at": "2019-09-27T16:42:42Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/saltyTT/MultiController/releases/assets/15169623",
-        "id": 15169623,
-        "node_id": "MDEyOlJlbGVhc2VBc3NldDE1MTY5NjIz",
+        "url": "https://api.github.com/repos/saltyTT/MultiController/releases/assets/15461592",
+        "id": 15461592,
+        "node_id": "MDEyOlJlbGVhc2VBc3NldDE1NDYxNTky",
         "name": "MultiController.app.zip",
         "label": null,
         "uploader": {
@@ -62,10 +62,10 @@
         },
         "content_type": "application/zip",
         "state": "uploaded",
-        "size": 4165936,
-        "download_count": 0,
-        "created_at": "2019-09-27T16:42:32Z",
-        "updated_at": "2019-09-27T16:42:40Z",
+        "size": 4166144,
+        "download_count": 203,
+        "created_at": "2019-10-14T03:59:33Z",
+        "updated_at": "2019-10-14T03:59:43Z",
         "browser_download_url": "https://github.com/saltyTT/MultiController/releases/download/v1.3_57/MultiController.app.zip"
       }
     ],
@@ -137,7 +137,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 4510421,
-        "download_count": 1028,
+        "download_count": 1045,
         "created_at": "2019-02-03T05:12:03Z",
         "updated_at": "2019-02-03T05:12:12Z",
         "browser_download_url": "https://github.com/saltyTT/MultiController/releases/download/v1.3_43/MultiController.app.zip"
@@ -211,7 +211,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 4516399,
-        "download_count": 524,
+        "download_count": 527,
         "created_at": "2018-09-28T02:02:05Z",
         "updated_at": "2018-09-28T02:02:14Z",
         "browser_download_url": "https://github.com/saltyTT/MultiController/releases/download/v1.3_29/MultiController.app.zip"
@@ -285,7 +285,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 4236407,
-        "download_count": 171,
+        "download_count": 172,
         "created_at": "2018-08-02T18:51:26Z",
         "updated_at": "2018-08-02T18:51:30Z",
         "browser_download_url": "https://github.com/saltyTT/MultiController/releases/download/v1.3_27/MultiController.app.zip"
@@ -1025,7 +1025,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 3499989,
-        "download_count": 14,
+        "download_count": 15,
         "created_at": "2018-03-24T05:00:34Z",
         "updated_at": "2018-03-24T05:00:38Z",
         "browser_download_url": "https://github.com/saltyTT/MultiController/releases/download/v0.1.0/MultiController.app.zip"
